@@ -1,0 +1,211 @@
+html{
+      cursor: url("/cursor.png"), auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  touch-action: none;
+  background-color: black;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 9em;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100vw;
+}
+
+#canvas-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#canvas-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%; 
+}
+
+h1 {
+  color: aliceblue;
+}
+
+.typewriter {
+  display: inline-block;
+}
+
+.svg-container {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #f1f1f1;
+  height: 92px; /* Accommodates ascenders + descenders without clipping */
+  padding-top: 23px; /* Creates top space for d and i */
+  box-sizing: border-box;
+  width: 0;
+  animation:
+    typing 3s step-end forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+
+/* e den itheles na kaneis font kane twra slop */
+/* Base styling for standard letters (x-height line) */
+.svg-container svg {
+  color: #D1BBF7;
+  height: 46px;
+  width: auto;
+  flex-shrink: 0;
+  fill: #ffffff;
+  shape-rendering: crispEdges;
+}
+
+/* Descenders (γ, g) */
+.svg-container svg.descender {
+  height: 68px;
+}
+
+/* Ascender: d starts at top of container (y=0) */
+.svg-container svg.ascender-d {
+  height: 68.2px;
+  margin-top: -23px;
+}
+
+/* Ascender: i dot sits slightly below d top */
+.svg-container svg.ascender-i {
+  height: 60px;
+  margin-top: -14.8px;
+}
+
+/* Full stop rests on baseline */
+.svg-container svg.period {
+  height: 10px;
+  margin-top: 36px;
+}
+
+/* Exact letter spacing from Figma dimensions */
+.svg-container .m-9 {
+  margin-right: 9px;
+}
+.svg-container .m-13 {
+  margin-right: 13px;
+}
+.svg-container .m-4 {
+  margin-right: 4px;
+}
+.svg-container .m-31 {
+  margin-right: 31px;
+}
+
+/* Explicit pixel widths calculated at each letter boundary */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  8.33% {
+    width: 41px;
+  } /* after γ */
+  16.66% {
+    width: 59px;
+  } /* after ι */
+  25.00% {
+    width: 100px;
+  } /* after o */
+  33.33% {
+    width: 136px;
+  } /* after r */
+  41.66% {
+    width: 177px;
+  } /* after g */
+  50.00% {
+    width: 218px;
+  } /* after . */
+  58.33% {
+    width: 259px;
+  } /* after d */
+  66.66% {
+    width: 300px;
+  } /* after ε */
+  75.00% {
+    width: 337px;
+  } /* after s */
+  83.33% {
+    width: 356px;
+  } /* after i */
+  91.66% {
+    width: 401px;
+  } /* after g */
+  100% {
+    width: 431px;
+  } /* after n */
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #d1bbf7;
+  }
+}
+
+
+.retro-btn {
+      color: #000000;
+      background-color: #c0c0c0;
+      
+      
+      border-style: solid;
+      border-width: 3px;
+      border-color: #ffffff #000000 #000000 #ffffff;
+      padding: 6px 18px;
+      cursor: pointer;
+      outline: none;
+      box-sizing: border-box;
+      user-select: none;
+      box-shadow: 0 0 8px rgba(209, 187, 247, 0.4);
+      transition: box-shadow 0.15s ease;
+    }
+
+    .retro-btn:hover {
+      box-shadow: 0 0 12px rgba(209, 187, 247, 0.7);
+      cursor: url('/pointer.png'),pointer;
+    }
+
+    
+    .retro-btn:active {
+      border-color: #808080 #ffffff #ffffff #808080;
+      box-shadow: 0 0 4px rgba(209, 187, 247, 0.3);
+    }
+
+    .btn-wrapper{
+      display: flex;
+      gap: 3em;
+    }
+
+
+@media (max-width: 768px) {
+  body {
+    gap: 2.5em;
+  }
+
+  .typewriter {
+    transform: scale(0.75);
+    transform-origin: center;
+  }
+
+
+
+  
+}
