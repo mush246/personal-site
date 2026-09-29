@@ -13,7 +13,7 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column-reverse;
-  gap: 9em;
+  gap:  min(9em, 4vh);
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -22,8 +22,8 @@ body {
 }
 
 #canvas-container {
-  width: 400px;
-  height: 400px;
+  width: min(400px, 40vh);
+  height: min(400px, 40vh);
   position: relative;
   display: flex;
   align-items: center;
@@ -205,7 +205,4 @@ h1 {
     transform-origin: center;
   }
 
-
-
-  
 }
